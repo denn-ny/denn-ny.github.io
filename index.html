@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="headbar">
+    <h1 class="title">Bookshelf Apps</h1>
+  </header>
+  <main>
+    <section class="inputSection">
+      <h2>Tambahkan Buku Baru</h2>
+      <form id="input-book">
+        <div class="input">
+          <label for="inputBookTitle">Judul:</label>
+          <input type="text" id="inputBookTitle" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis:</label>
+          <input type="text" id="inputBookAuthor" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun:</label>
+          <input type="number" id="inputBookYear" required>
+        </div>
+        <div class="inputInline">
+          <label for="inputBookIsCompleted">Selesai dibaca</label>
+          <input type="checkbox" id="inputBookIsCompleted">
+        </div>
+        <button type="submit" id="bookSubmit">Masukkan buku ke rak <span id="button-text">Belum selesai dibaca</span></button>
+      </form>
+    </section>
+    
+    <section class="searchSection">
+      <h2>Cari Buku</h2>
+      <form id="search-book">
+        <label for="searchBookTitle">Judul:</label>
+        <input type="text" id="searchBookTitle">
+        <button type="submit" id="search-btn">Cari</button>
+      </form>
+    </section>
+  
+    <section class="bookshelf">
+      <h2>Belum selesai dibaca</h2>
+      <div id="incompleted-bookshelf-list" class="bookList"></div>
+    </section>
+  
+    <section class="bookshelf">
+      <h2>Selesai dibaca</h2>
+      <div id="completed-bookshelf-list" class="bookList"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
